@@ -60,3 +60,7 @@ class Fally:
         new_rectangle = rotated_image.get_rect(center = self.IMG.get_rect(topleft = (self.x, self.y)).center)
         # win.blit simply draws
         win.blit(rotated_image, new_rectangle.topleft)
+
+    # Used for per-pixel collision detection
+    def get_mask(self):
+        return pygame.mask.from_surface(self.IMG)
